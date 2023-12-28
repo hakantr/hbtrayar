@@ -1,0 +1,17 @@
+[shell]
+args = ["new-session", "-A", "-D", "-s", "main"]
+program = "/usr/bin/tmux"
+
+[window]
+decorations = "linux"
+dynamic_padding = false
+dynamic_title = true
+opacity = 1.0
+
+[window.dimensions]
+columns = 160
+lines = 48
+
+[window.padding]
+x = 2
+y = 2
