@@ -1,3 +1,5 @@
+import=["./alacritty_tanim.toml"]
+
 [shell]
 args = ["new-session", "-A", "-D", "-s", "main"]
 program = "/opt/homebrew/bin/tmux"

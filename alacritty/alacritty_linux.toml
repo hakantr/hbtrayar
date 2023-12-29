@@ -1,9 +1,10 @@
+import = [ "~/.config/alacritty/alacritty_tanim.toml" ]
 [shell]
 args = ["new-session", "-A", "-D", "-s", "main"]
 program = "/usr/bin/tmux"
 
 [window]
-decorations = "linux"
+decorations = "full"
 dynamic_padding = false
 dynamic_title = true
 opacity = 1.0
