@@ -19,29 +19,6 @@ render_timer = false
 [env]
 TERM = "xterm-256color"
 
-[font]
-size = 8.0
-
-[font.bold]
-family = "SpaceMono Nerd Font"
-style = "Bold"
-
-[font.glyph_offset]
-x = 0
-y = 0
-
-[font.italic]
-family = "SpaceMono Nerd Font"
-style = "Italic"
-
-[font.normal]
-family = "SpaceMono Nerd Font"
-style = "Regular"
-
-[font.offset]
-x = 0
-y = 0
-
 [[hints.enabled]]
 command = "xdg-open"
 hyperlinks = true

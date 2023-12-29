@@ -1,4 +1,4 @@
-import=["./alacritty_tanim.toml"]
+import=["~/.config/alacritty/alacritty_tanim.toml"]
 
 [shell]
 args = ["new-session", "-A", "-D", "-s", "main"]
@@ -17,3 +17,26 @@ lines = 48
 [window.padding]
 x = 2
 y = 2
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "SpaceMono Nerd Font"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "SpaceMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "SpaceMono Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
