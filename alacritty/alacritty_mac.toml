@@ -1,8 +1,7 @@
 import=["~/.config/alacritty/alacritty_tanim.toml"]
 
 [shell]
-args = ["new-session", "-A", "-D", "-s", "main"]
-program = "/opt/homebrew/bin/tmux"
+program = "/usr/local/bin/fish"
 
 [window]
 decorations = "Buttonless"
@@ -19,7 +18,7 @@ x = 2
 y = 2
 
 [font]
-size = 13.0
+size = 14.0
 
 [font.bold]
 family = "SpaceMono Nerd Font"

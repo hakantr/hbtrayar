@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "gruvbox_dark_hard"
 
 [editor]
 line-number = "relative"
@@ -22,6 +22,8 @@ hidden = false
 esc = ["collapse_selection", "normal_mode"]
 
 [keys.normal]
+C-s = ":w" # Kaydetmet için
+C-o = ":open"
 esc = ["collapse_selection", "keep_primary_selection"]
 ret = ["move_line_down", "goto_first_nonwhitespace"]
 0 = ["goto_line_start"]
