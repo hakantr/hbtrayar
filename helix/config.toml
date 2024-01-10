@@ -6,6 +6,9 @@ mouse = true
 auto-save = true
 bufferline = "multiple"
 true-color = true
+cursorline = true
+idle-timeout = 100
+text-width = 120
 
 [editor.indent-guides]
 render = true
@@ -16,7 +19,19 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = false
+  hidden = true
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = " "
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 
 [keys.insert]
 esc = ["collapse_selection", "normal_mode"]

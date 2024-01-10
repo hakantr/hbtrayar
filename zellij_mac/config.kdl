@@ -218,7 +218,7 @@ themes {
 plugins {
     tab-bar { path "tab-bar"; }
     status-bar { path "status-bar"; }
-    strider { path "strider"; }
+    // strider { path "strider"; }
     compact-bar { path "compact-bar"; }
     session-manager { path "session-manager"; }
 }
@@ -253,6 +253,7 @@ default_cwd "."
 //   - false
 //
 // pane_frames true
+pane_frames: true
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
