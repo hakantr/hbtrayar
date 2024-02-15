@@ -1,8 +1,9 @@
 import=["~/.config/alacritty/alacritty_tanim.toml"]
 
 [shell]
-program = "/usr/local/bin/fish"
-
+  program = "/usr/local/bin/fish"
+  args= ["-l", "-c", "zellij attach --index 0 || zellij"]
+    
 [window]
 decorations = "Buttonless"
 dynamic_padding = false
