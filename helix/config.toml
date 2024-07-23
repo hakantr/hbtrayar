@@ -1,17 +1,29 @@
-theme = "gruvbox_dark_hard"
+theme = "onedark"
 
 [editor]
-line-number = "relative"
+line-number = "absolute"
+scrolloff = 5
 mouse = true
+middle-click-paste = true
+scroll-lines = 1
+shell = ["sh", "-c"]
+cursorline =true
+auto-completion = true
+auto-format = true
 auto-save = true
-bufferline = "multiple"
 true-color = true
-cursorline = true
 idle-timeout = 100
+bufferline = "multiple"
+color-modes = true
 text-width = 120
+popup-border = "all"
+terminal.command = "bash"
+terminal.args = ["-c"]
 
-[editor.indent-guides]
-render = true
+[editor.lsp]
+enable = true
+display-messages = true
+display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -19,26 +31,43 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-  hidden = true
+hidden = true
 
 [editor.whitespace.render]
 space = "all"
 tab = "all"
+nbsp = "none"
+nnbsp = "none"
 newline = "none"
 
 [editor.whitespace.characters]
 space = " "
 nbsp = "⍽"
+nnbsp = "␣"
 tab = "→"
 newline = "⏎"
 tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.gutters.line-numbers]
+min-width = 1
+
 [keys.insert]
 esc = ["collapse_selection", "normal_mode"]
+C-s = ":w" 
+C-c = "yank_to_clipboard"
+C-v = "paste_clipboard_before"
 
 [keys.normal]
 C-s = ":w" # Kaydetmet için
-C-o = ":open"
+C-o = "file_picker_in_current_directory"
 esc = ["collapse_selection", "keep_primary_selection"]
 ret = ["move_line_down", "goto_first_nonwhitespace"]
 0 = ["goto_line_start"]
@@ -46,3 +75,4 @@ ret = ["move_line_down", "goto_first_nonwhitespace"]
 [keys.select]
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 0   = "goto_line_start"
+
