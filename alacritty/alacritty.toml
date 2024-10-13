@@ -1,6 +1,6 @@
 [terminal.shell]
   program = "/usr/bin/fish"
-  args = ["--login", "-c", "tmux a -t base  || tmux new -s base"]
+  args = ["--login"]
 
 [general]
   live_config_reload = true
