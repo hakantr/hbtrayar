@@ -1,2 +1,0 @@
-# Ayarlar
-Uygulama ayarları

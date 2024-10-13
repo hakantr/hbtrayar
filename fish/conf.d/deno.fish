@@ -1,0 +1,1 @@
+source "/home/hakanbiris/.deno/env.fish"
