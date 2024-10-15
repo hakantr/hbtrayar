@@ -24,7 +24,7 @@
   y = 0
 
 [scrolling]
-  history = 0
+  history = 65350
 
 [font]
   size = 15.0
@@ -32,30 +32,30 @@
   glyph_offset = { x = 0, y = 0 }
 
 [font.bold]
-  family = "MesloLGSNF"
+  family = "SpaceMono Nerd Font"
   style = "Heavy"
 
 [font.bold_italic]
-  family = "MesloLGSNF"
+  family = "SpaceMono Nerd Font"
   style = "Heavy Italic"
 
 [font.italic]
-  family = "MesloLGSNF"
-  style = "Medium Italic"
+  family = "SpaceMono Nerd Font"
+  style = "Regular Italic"
 
 [font.normal]
-  family = "MesloLGSNF"
-  style = "Medium"
+  family = "SpaceMono Nerd Font"
+  style = "Regular"
 
 [colors.primary]
 background            = "#2b2b2b"
-foreground            = "#CDD6F4"
+foreground            = "#afb9c3"
 dim_foreground        = "#CDD6F4"
 bright_foreground     = "#CDD6F4"
 
 [colors.cursor]
-text                  = "#1E1E2E"
-cursor                = "#F5E0DC"
+text                  = "#d0d0d9"
+cursor                = "#217de1"
 
 [colors.vi_mode_cursor]
 text                  = "#1E1E2E"
@@ -78,46 +78,46 @@ foreground            = "#1E1E2E"
 background            = "#A6ADC8"
 
 [colors.line_indicator]
-#foreground            = "None"
-#background            = "None"
+#foreground            = "#3e7bd9"
+#background            = "#2b2b2b"
 
 [colors.footer_bar]
 foreground            = "#1E1E2E"
 background            = "#A6ADC8"
 
 [colors.selection]
-text                  = "#1E1E2E"
-background            = "#F5E0DC"
+text                  = "#c7d0d8"
+background            = "#173f59"
 
 [colors.normal]
-black                 = "#45475A"
-red                   = "#F38BA8"
-green                 = "#A6E3A1"
-yellow                = "#F9E2AF"
-blue                  = "#89B4FA"
-magenta               = "#F5C2E7"
-cyan                  = "#94E2D5"
-white                 = "#BAC2DE"
+black                 = "#2b2b2b"
+red                   = "#ff757f"
+green                 = "#7af8ca"
+yellow                = "#ffbd76"
+blue                  = "#70b0ff"
+magenta               = "#baacff"
+cyan                  = "#7e8eda"
+white                 = "#c8d3f5"
 
 [colors.bright]
-black                 = "#585B70"
-red                   = "#F38BA8"
-green                 = "#A6E3A1"
-yellow                = "#F9E2AF"
-blue                  = "#89B4FA"
-magenta               = "#F5C2E7"
-cyan                  = "#94E2D5"
-white                 = "#A6ADC8"
+black                 = "#6b6b6b"
+red                   = "#ff8a93"
+green                 = "#9cffdb"
+yellow                = "#ffd28b"
+blue                  = "#91c6ff"
+magenta               = "#d0c4ff"
+cyan                  = "#9fa5f0"
+white                 = "#feffff"
 
 [colors.dim]
-black                 = "#45475A"
-red                   = "#F38BA8"
-green                 = "#A6E3A1"
-yellow                = "#F9E2AF"
-blue                  = "#89B4FA"
-magenta               = "#F5C2E7"
-cyan                  = "#94E2D5"
-white                 = "#BAC2DE"
+black   = "#1b1b1b"  # Daha koyu bir siyah
+red     = "#ff5a60"  # Daha hafif bir kırmızı
+green   = "#5fc4a3"  # Daha soluk bir yeşil
+yellow  = "#d49c5e"  # Daha hafif bir sarı
+blue    = "#5c91d1"  # Daha soluk bir mavi
+magenta = "#9b8ad0"  # Daha pastel bir mor
+cyan    = "#656eae"  # Daha düşük parlaklıkta bir cyan
+white   = "#a8b0d0"  # Daha az parlak beyaz
 
 [colors]
 indexed_colors = [
@@ -127,11 +127,11 @@ indexed_colors = [
 #transparent_background_colors = false
 draw_bold_text_with_bright_colors = true
 
-[bell]
-animation             = "EaseOutExpo"
-duration              = 0
-color                 = "#C0C5CE"
-command               = { program = "notify-send", args = ["alacritty", "bell",] }
+#[bell]
+#animation             = "EaseOutExpo"
+#duration              = 0
+#color                 = "#C0C5CE"
+#command               = { program = "notify-send", args = ["alacritty", "bell",] }
 
 [selection]
 #semantic_escape_chars = ",│‘|:"' ()[]{}<>t"
@@ -161,18 +161,18 @@ bindings = [
 ]
 
 [hints]
-#alphabet              = "jfkdls;ahgurieowpq"
+alphabet              = "jfkdls;ahgurieowpq"
 
-#[[hints.enabled]]
+[[hints.enabled]]
 #command               = "xdg-open"
-## command             = "open" # On macOS
+command             = "open" # On macOS
 ## command             = { program = "cmd", args = [ "/c", "start", "" ] } # On Windows
-#hyperlinks            = true
-#post_processing       = true
-#persist               = false
-#mouse.enabled         = true
-#binding               = { key = "U", mods = "Control|Shift" }
-#regex                 = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
+hyperlinks            = true
+post_processing       = true
+persist               = false
+mouse.enabled         = true
+binding               = { key = "U", mods = "Control|Shift" }
+regex                 = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
 
 [keyboard]
 bindings = [
@@ -194,6 +194,7 @@ bindings = [
   { key = "Down",     mods = "Shift",         action = "ScrollLineDown",    mode = "~Alt" },
   { key = "Home",     mods = "Shift",         action = "ScrollToTop",       mode = "~Alt" },
   { key = "End",      mods = "Shift",         action = "ScrollToBottom",    mode = "~Alt" },
+  { key = "N",        mods = "Control",       action = "CreateNewWindow"},
 ]
 
 
