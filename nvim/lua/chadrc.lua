@@ -6,12 +6,35 @@
 local M = {}
 
 M.base46 = {
-	theme = "flexoki",
+  theme = "github_dark",
+  transparency = true,
+}
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+M.ui = {
+   statusline = {
+     theme = "default",
+     separator_style = "default",
+     order = { "mode", "f", "git", "%=", "lsp_msg", "%=", "lsp", "cwd", "xyz", "abc" },
+     modules = {
+       abc = function()
+         return "hi"
+       end,
+
+       xyz =  "hi",
+       f = "%F"
+     }
+   },
+
+  cmp = {
+    style = "default",
+    icons_left = true,
+  },
+  tabufline = {
+       enabled = true,
+       lazyload = true,
+       order = { "treeOffset", "buffers", "tabs", "btns" },
+       modules = nil,
+     },
 }
 
 return M
