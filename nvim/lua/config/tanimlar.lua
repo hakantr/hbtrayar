@@ -13,7 +13,7 @@ require('otomatik.yedekleme')
 
 -- Diğer tanımlar çalıştırılıyor
 
-require("mappings")
+
 
 -- Editor tanımları
 
