@@ -1,6 +1,7 @@
 local autocmd = vim.api.nvim_create_autocmd
 
--- user event that loads after UIEnter + only if file buf is there
+-- Kullanıcı arayüzü (UIEnter) yüklendikten sonra ve
+-- sadece bir dosya arabelleği mevcutsa tetiklenen kullanıcı olayı.
 autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
   group = vim.api.nvim_create_augroup("HbFilePost", { clear = true }),
   callback = function(args)

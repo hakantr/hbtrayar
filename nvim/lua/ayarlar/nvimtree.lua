@@ -1,4 +1,4 @@
-return {
+require("nvim-tree").setup {
   filters = { dotfiles = false },
   disable_netrw = true,
   hijack_cursor = true,
@@ -15,6 +15,7 @@ return {
     root_folder_label = false,
     highlight_git = true,
     indent_markers = { enable = true },
+    group_empty = true,
     icons = {
       glyphs = {
         default = "󰈚",

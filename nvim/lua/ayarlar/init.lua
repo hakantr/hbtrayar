@@ -1,27 +1,8 @@
--- Global değişken ayarları
-yedek_al = true   -- Yedekleme aktif mi?
-yedek_gun = 30 -- Yedek dosyaları 30 gün sonra temizlensin. 0 ise temizlenmez.
-
--- yerel değişkenler
-
 local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
--- Yedek fonksiyonu çağrılıyor
-require('otomatik.yedekleme')
-
--- Diğer tanımlar çalıştırılıyor
-
-
-
--- Editor tanımları
-
-o.autochdir	= ture 	-- Otomatik dizin değiştirme aktif
-o.autoindent 	= true 	-- Otomatik girinti aktif
-o.autoread 	= true 	-- Otomatik oku aktif, Dosya neovim dışında değiştirildiğinde otomatik okunacak
-o.autowrite	= true	-- Otomatik kayıt ektif
-
+-------------------------------------- options ------------------------------------------
 o.laststatus = 3
 o.showmode = false
 
@@ -73,3 +54,12 @@ local is_windows = vim.fn.has "win32" ~= 0
 local sep = is_windows and "\\" or "/"
 local delim = is_windows and ";" or ":"
 vim.env.PATH = table.concat({ vim.fn.stdpath "data", "mason", "bin" }, sep) .. delim .. vim.env.PATH
+
+vim.cmd [[colorscheme tokyonight-storm]]
+local renkler_bul = require("ayarlar.renkleri_bul")
+
+-- Tema renklerini `colors` değişkenine ata
+local colors = renkler_bul.get_colors()
+
+vim.api.nvim_set_hl(0, "IblChar", { fg = colors.Normal.fg, bg = nil })
+vim.api.nvim_set_hl(0, "IblScopeChar", { fg = colors.Normal.bg, bg = nil })
