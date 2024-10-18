@@ -56,10 +56,3 @@ local delim = is_windows and ";" or ":"
 vim.env.PATH = table.concat({ vim.fn.stdpath "data", "mason", "bin" }, sep) .. delim .. vim.env.PATH
 
 vim.cmd [[colorscheme tokyonight-storm]]
-local renkler_bul = require("ayarlar.renkleri_bul")
-
--- Tema renklerini `colors` değişkenine ata
-local colors = renkler_bul.get_colors()
-
-vim.api.nvim_set_hl(0, "IblChar", { fg = colors.Normal.fg, bg = nil })
-vim.api.nvim_set_hl(0, "IblScopeChar", { fg = colors.Normal.bg, bg = nil })
