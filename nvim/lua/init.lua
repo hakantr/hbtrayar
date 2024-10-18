@@ -1,3 +1,8 @@
+-- <leader> tuşunu boşluk tuşuna atama
+vim.g.mapleader = " "  -- Leader tuşunu boşluk olarak ayarla
+vim.g.maplocalleader = " " -- Yerel leader tuşunu da boşluk olarak ayarlar
+
+
 -- Lazy tanımları yapılıyor
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
