@@ -23,6 +23,9 @@ require("lazy").setup({
   { import = "eklentiler" },
 }, lazy_config)
 
+
+require("ayarlar.renkleri_bul")
 require("ayarlar.init")
 require("eklentiler.init")
 require("otocmd")
+require("ayarlar.whichkey")

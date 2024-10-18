@@ -47,11 +47,35 @@ function renkleri_al()
   }
 end
 
--- Tema renklerini `colors` değişkenine ata
-local renkler = renkleri_al()
+function blankline_renkleri()
+    -- Tema renklerini `renkler` değişkenine ata
+    local renkler = renkleri_al()
 
-IblKarakter = acik_renk(renkler.Normal.bg, 50)
-IblKapsamKarakteri = acik_renk(renkler.Normal.bg, 50)
+    IblKarakter = acik_renk(renkler.CursorLine.bg, 10)
+    IblKapsamKarakteri = acik_renk(renkler.CursorLine.bg, 10)
+    -- IblKarakter için bir highlight grubu tanımlama
+    vim.api.nvim_set_hl(0, "IblKarakter", {
+        fg = IblKarakter, -- GUI ön plan rengi (guifg)
+        ctermfg = nill, -- Cterm ön plan rengi (ctermfg)
+        bg = nill,     -- Arka plan (NONE olarak bırakılıyor)
+        ctermbg = nill, -- Cterm arka planı (NONE olarak bırakılıyor)
+        cterm = nocombine, -- Terminal modunda nocombine
+        gui = nocombine -- GUI modunda nocombine
+    })
 
-vim.api.nvim_set_hl(0, "MyStatusLine", { fg = "#ffffff", bg = "#000000" })
-vim.opt.statusline = "%#MyStatusLine# " .. renkler.Normal.bg .. "-" .. IblKapsamKarakteri .. " %v "
+    -- IblKapsamKarakteri için bir highlight grubu tanımlama
+    vim.api.nvim_set_hl(0, "IblKapsamKarakteri", {
+        fg = IblKapsamKarakteri, -- GUI ön plan rengi (guifg)
+        ctermfg = nill,    -- Cterm ön plan rengi (ctermfg)
+        bg = nill,         -- Arka plan (NONE olarak bırakılıyor)
+        ctermbg = nill,    -- Cterm arka planı (NONE olarak bırakılıyor)
+        cterm = nocombine, -- Terminal modunda nocombine
+        gui = nocombine    -- GUI modunda nocombine
+    })
+end
+
+-- Modül olarak fonksiyonları dışa aktarma
+return {
+  renkleri_al = renkleri_al,
+  blankline_renkleri = blankline_renkleri
+}
