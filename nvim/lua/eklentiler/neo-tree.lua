@@ -1,5 +1,33 @@
 return {
-  function()
+  "nvim-neo-tree/neo-tree.nvim",
+  event = "VeryLazy",
+  branch = "v3.x",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim",
+    -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    {
+      's1n7ax/nvim-window-picker',
+      version = '2.*',
+      config = function()
+        require 'window-picker'.setup({
+          filter_rules = {
+            include_current_win = false,
+            autoselect_one = true,
+            -- filter using buffer options
+            bo = {
+              -- if the file type is one of following, the window will be ignored
+              filetype = { 'neo-tree', "neo-tree-popup", "notify" },
+              -- if the buffer type is one of following, the window will be ignored
+              buftype = { 'terminal', "quickfix" },
+            },
+          },
+        })
+      end,
+    },
+  },
+  config = function()
     -- If you want icons for diagnostic errors, you'll need to define them somewhere:
     vim.fn.sign_define("DiagnosticSignError",
       { text = " ", texthl = "DiagnosticSignError" })
@@ -308,5 +336,25 @@ return {
     })
 
     vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+
+    -- Neo-tree durumunu kontrol eden fonksiyon
+    local function is_neo_tree_open()
+      for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local buf = vim.api.nvim_win_get_buf(win)
+        if vim.api.nvim_buf_get_option(buf, 'filetype') == 'neo-tree' then
+          return true
+        end
+      end
+      return false
+    end
+
+    -- Neo-tree durumunu kontrol eden özel komut
+    vim.api.nvim_create_user_command("CheckNeoTree", function()
+      if is_neo_tree_open() then
+        print("Neo-tree açık.")
+      else
+        print("Neo-tree kapalı.")
+      end
+    end, { desc = "Neo-tree'nin açık olup olmadığını kontrol et" })
   end
 }

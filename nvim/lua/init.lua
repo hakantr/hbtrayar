@@ -1,5 +1,5 @@
 -- <leader> tuşunu boşluk tuşuna atama
-vim.g.mapleader = " "  -- Leader tuşunu boşluk olarak ayarla
+vim.g.mapleader = " "      -- Leader tuşunu boşluk olarak ayarla
 vim.g.maplocalleader = " " -- Yerel leader tuşunu da boşluk olarak ayarlar
 
 

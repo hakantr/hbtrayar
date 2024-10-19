@@ -62,9 +62,9 @@ renk_modul = require("ayarlar.renkleri_bul")
 
 -- Autocmd ile renk şeması değiştiğinde `renkleri_bul.lua` dosyasını çalıştır
 vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",  -- Tüm renk şeması değişikliklerinde
+  pattern = "*", -- Tüm renk şeması değişikliklerinde
   callback = function()
-      -- Lua dosyasını çalıştır
-      renk_modul.blankline_renkleri()
+    -- Lua dosyasını çalıştır
+    renk_modul.blankline_renkleri()
   end,
 })
