@@ -101,8 +101,31 @@ return {
   {
     "williamboman/mason.nvim",
     cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
+      {
+        "jay-babu/mason-null-ls.nvim",
+        event = { "BufReadPre", "BufNewFile" },
+        dependencies = {
+          "williamboman/mason.nvim",
+          "jose-elias-alvarez/null-ls.nvim",
+          "nvimtools/none-ls.nvim",
+        },
+        config = function()
+          require("mason-null-ls").setup({
+            handlers = {},
+          })
+        end,
+      },
+    },
     opts = function()
       return require "ayarlar.mason"
+    end,
+    config = function()
+      require("mason").setup()
+      require("ayarlar.mason-lspconfig")
+      require("ayarlar.mason-tool-installer")
     end,
   },
 
