@@ -1,5 +1,5 @@
 [terminal.shell]
-  program = "/usr/bin/fish"
+  program = "/usr/local/bin/fish"
   args = ["--login"]
 
 [general]
@@ -33,11 +33,11 @@
 
 [font.bold]
   family = "SpaceMono Nerd Font"
-  style = "Heavy"
+  style = "Bold"
 
 [font.bold_italic]
   family = "SpaceMono Nerd Font"
-  style = "Heavy Italic"
+  style = "Bold Italic"
 
 [font.italic]
   family = "SpaceMono Nerd Font"
@@ -164,9 +164,9 @@ bindings = [
 alphabet              = "jfkdls;ahgurieowpq"
 
 [[hints.enabled]]
-#command               = "xdg-open"
-command             = "open" # On macOS
-## command             = { program = "cmd", args = [ "/c", "start", "" ] } # On Windows
+command               = "xdg-open"
+#command             = "open" # On macOS
+# command             = { program = "cmd", args = [ "/c", "start", "" ] } # On Windows
 hyperlinks            = true
 post_processing       = true
 persist               = false
